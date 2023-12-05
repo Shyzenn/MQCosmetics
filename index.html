@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <title>MQ Cosmetics</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="logo2">
+                <img src="MQlogo.png" alt="">
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="header">
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <nav>
+                    <div class="navLinks">
+                        <a href="#home">Home</a>
+                        <a href="#Story">Story</a>
+                        <a href="#Outlook">Outlook</a>
+                    </div>
+                    <div class="logo">
+                        <img src="MQlogo.png" alt="">
+                    </div>
+                    <div class="socialLinks">
+                        <a href="https://www.facebook.com/mqcosmeticsph/" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/m.q.cosmeticsph/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@m.q.cosmeticsandselfcare" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section id="home">
+            <div class="hero">
+                <div class="heroContent">
+                    <h1><span>M.Q.</span> Cosmetics PH</h1>
+                    <p>M.Q. Cosmetics PH is a local brand that offers High Quality and Organic products which is perfect for all ages.</p>
+                    <a href="https://shopee.ph/mqcosmeticsph" target="_blank"><button>Shop Now !</button></a>
+                </div>
+                <div class="heroImg">
+                    <img src="MQhomeImg.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="Story">
+            <div class="storyContainer">
+                <h1 class="reveal">Our Story</h1>
+                <div class="story">
+                    <div class="slider reveal">
+                        <div class="imgContainer reveal">
+                            <div class="2Slide">
+                                <img src="storyImgs/storyImg3.jpg">
+                            </div>
+                            <div class="3Slide">
+                                <img src="storyImgs/storyImg2.jpg">
+                            </div>
+                            <div class="4Slide">
+                                <img src="storyImgs/storyImg4.jpg">
+                            </div>
+                            <div class="5Slide">
+                                <img src="storyImgs/storyImg5.jpg">
+                            </div>
+                            <div class="6Slide">
+                                <img src="storyImgs/storyImg6.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="storyContent reveal">
+                        <p>The businesswoman's name is Maria Joycenyl E. Reyes, and the brand she founded is called MQ Cosmetics. 
+                            The beauty brand has been making a name for itself thanks to the quality of the products as 
+                            well as the dedication and personal touch Reyes and her team put into the business.</p>
+                        <p>A journery of resilience and success.
+                            founded by Maria Joycenyl E. Reyes, also known as MQ, the brand has quickly gained popularity as a result of MQ's determination and 
+                            innovative marketing strategies. MQ Cosmetics started as a humble venture during the challenging times of the COVID-19 pandemic.</p>
+                            <p>MQ CPSMETIC STARTED
+                                MQ Cosmetics first made its mark in the industry with the introduction of their signature product, the Macaroon 
+                                Lip Balm. This unique lip balm, inspired by the delicate and vibrant colors of macarons, quickly gained popularity 
+                                for its long-lasting formula, moisturizing properties, and wide range of stunning shades. The Macaroon Lip Balm 
+                                became an instant hit among beauty enthusiasts, setting the stage for MQ Cosmetics’ rapid growth and success.</p>
+                        </div>
+                </div>
+                <div class="outlookContainer" id="Outlook">
+                    <div class="outlook reveal">
+                        <h1 class="reveal">Outlook</h1>
+                        <div class="outlookp">
+                            <p>THE Covid-19 pandemic may have caused a lot of pains, especially to those who got ill or lost their loved ones from this dreaded disease,
+                                but there are also beautiful stories that came out of this most challenging crisis of the 21st century.</p>
+                           <p>MQ Cosmetics is one of them, with its inspiring tenacity and success to withstand this global health malady—thanks to its founder’s 
+                               determination and innovative marketing strategies.</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <script>
+            window.addEventListener('scroll', reveal);
+            
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal')
+                for(var i = 0; i < reveals.length; i++){
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 100;
+                    if(revealtop < windowheight - revealpoint){
+                        reveals[i].classList.add('active')
+                    }
+                    else{
+                        reveals[i].classList.remove('active')
+                    }
+                }
+            }
+
+            const hamburger = document.querySelector('.hamburger')
+            const nav = document.querySelector('.header')
+            const close = document.querySelector('.close')
+
+            hamburger.addEventListener('click', () => {
+                nav.style.visibility = 'visible'
+            })
+
+            close.addEventListener('click', () => {
+                nav.style.visibility = 'hidden'
+            })
+
+        </script>
+    </body>
+</html>
